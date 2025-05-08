@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horta Digital</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Horta Digital</h1>
+    <p>Produtos fresquinhos direto da Dona Lourdes</p>
+    <nav>
+      <ul>
+        <li><a href="#home"><img src="images/home-icon.png" alt="Início" /></a></li>
+        <li><a href="#cart"><img src="images/cart-icon.png" alt="Carrinho" /></a></li>
+        <li><a href="#help"><img src="images/help-icon.png" alt="Ajuda" /></a></li>
+        <li><a href="https://wa.me/42999379558"><img src="images/whatsapp-icon.png" alt="Contato" /></a></li>
+        <li><a href="#admin"><img src="images/admin-icon.png" alt="Administração" /></a></li>
+        <li><a href="#back"><img src="images/back-icon.png" alt="Voltar" /></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="catalogo">
+      <h2>Catálogo de Produtos</h2>
+      <div class="produto">
+        <img src="images/cenoura.jpg" alt="Cenoura">
+        <h3>Cenoura</h3>
+        <p>Preço: R$ 5,00/kg</p>
+        <button class="comprar" onclick="adicionarCarrinho('Cenoura', 'R$ 5,00', 'images/cenoura.jpg')">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="images/alface.jpg" alt="Alface">
+        <h3>Alface</h3>
+        <p>Preço: R$ 3,00/unidade</p>
+        <button class="comprar" onclick="adicionarCarrinho('Alface', 'R$ 3,00', 'images/alface.jpg')">Comprar</button>
+      </div>
+      <!-- Adicione mais produtos aqui -->
+    </section>
+
+    <section id="cart" style="display:none;">
+      <h2>Carrinho de Compras</h2>
+      <ul id="produtosCarrinho"></ul>
+      <button onclick="finalizarPedido()">Finalizar Pedido</button>
+      <button onclick="limparCarrinho()">Limpar Carrinho</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
